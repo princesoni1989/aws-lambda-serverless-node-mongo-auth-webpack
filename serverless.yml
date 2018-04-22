@@ -1,0 +1,21 @@
+service: react-air-server
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+functions:
+  server:
+    handler: lambda.server
+    events:
+      - http:
+          path: server
+          method: get
+          cors: true
+
+  list:
+    handler: lambda.endpoint
+    events:
+      - http:
+          path: endpoint
+          method: get
+          cors: true
