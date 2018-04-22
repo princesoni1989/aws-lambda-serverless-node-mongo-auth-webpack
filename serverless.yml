@@ -11,11 +11,3 @@ functions:
           path: server
           method: get
           cors: true
-
-  list:
-    handler: lambda.endpoint
-    events:
-      - http:
-          path: endpoint
-          method: get
-          cors: true
